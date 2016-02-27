@@ -1,0 +1,38 @@
+.l-home__greatings {
+    @include margin-trailer(1);
+    @include grid-clearfix();
+    position: relative;
+    height: calc(100vh - 92px);
+    background: url('/img/home-bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    text-align: center;
+}
+
+.l-home__greatings-col {
+
+    @media #{$medium-up} {
+        @include span(10 center);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media #{$big-up} {
+        @include span(6 center);
+    }
+
+    h1 {
+        @include margin-trailer(1);
+    }
+}
+
+.l-home__features {
+    @include grid-clearfix();
+}
+
+.l-home__feature {
+
+    @media #{$medium-up} {
+        @include gallery(4);
+    }
+}

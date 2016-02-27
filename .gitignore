@@ -1,0 +1,13 @@
+*.DS_Store
+/node_modules/*
+*.idea
+/.sass-cache
+/tmp/*
+/www/bitrix/*
+/www/upload/*
+/www/local/php_interface/lib/dompdf/lib/fonts/log*
+/www/sitemap.xml*
+/www/sitemap_*
+/www/.access.php
+/www/web.config
+/import/*

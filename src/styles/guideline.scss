@@ -1,0 +1,166 @@
+@import 'app';
+
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+body {
+    background: #EFEDDF;
+}
+
+.nav {
+    @include span(full);
+
+    @media #{$medium-up} {
+        @include span(3);
+        height: 100vh;
+    }
+}
+
+.nav__list {
+    list-style-type: none;
+
+    a {
+        color: blue;
+        text-decoration: none;
+
+        &:hover {
+            color: darken(blue, 30%);
+        }
+    }
+
+    @media #{$medium-up} {
+        position: fixed;
+        top: rhythm(1);
+        left: 10px;
+    }
+}
+
+.content {
+    @include span(9);
+}
+
+.section {
+    @include margin-trailer(2);
+
+    h2:first-child {
+        @include margin-trailer(1);
+        border-bottom: 1px solid #000;
+    }
+}
+
+//Typo
+.type_font1 {
+    font-family: $font;
+}
+
+.type_font2 {
+    font-family: $font-bold;
+}
+
+.type_font3 {
+    font-family: $font-italic;
+}
+
+//Сетка
+.l-row {
+    @include container();
+}
+
+.l-col {
+    @include span(1);
+    @include margin-trailer();
+    padding: 0;
+    background-color: rgba(blue, .5);
+    box-shadow:
+    inset 10px 0 0 $white,
+    inset -10px 0 0 $white;
+    text-align: center;
+    color: $white;
+}
+
+.l-row2 .l-col {
+    @include span(2);
+}
+
+.l-row3 .l-col {
+    @include span(3);
+}
+
+.l-row4 .l-col {
+    @include span(4);
+}
+
+.l-row6 .l-col {
+    @include span(6);
+}
+
+.l-row12 .l-col{
+    @include span(12);
+}
+
+// Цвета
+.colors {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+}
+.color {
+    $size: 80px;
+    width: $size;
+    height: $size;
+    float: left;
+    margin: 0 10px;
+    border: 10px solid $white;
+}
+
+
+//Ссылки
+.link {
+    @include transition(color);
+    margin-right: gutter();
+    color: blue;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: darken(blue, 30%);
+    }
+
+
+    &.is-hover {
+        text-decoration: underline;
+        color: darken(blue, 30%);
+    }
+}
+
+//Списки
+#lists {
+    @include margin-trailer(2);
+    overflow: hidden;
+    ol,
+    ul {
+        float: left;
+        width: 50%;
+    }
+}
+
+//Формы
+//Чекбоксы
+.b-form__checkbox,
+.b-form__radio {
+    margin-right: 10px;
+}
+
+
+//Кнопки
+.b-btn {
+    @include margin-trailer();
+    width: 30%;
+    margin-right: 20px;
+}

@@ -1,0 +1,1 @@
+define(["handlebars"],function(a){return a.template({compiler:[6,">= 2.0.0-beta.1"],main:function(){return'<div class="reveal-modal reveal-modal-alt" data-reveal>\n	<div class="reveal-modal-inner">\n	<div class="js-alert"></div>\n	<a class="close-reveal-modal">&#215;</a>\n	</div>\n</div>\n'},useData:!0})});

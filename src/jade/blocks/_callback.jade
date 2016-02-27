@@ -1,0 +1,31 @@
+a(href="#callback").j-popup Заказать обратный звонок
+#callback.mfp-hide.b-popup
+    a(href="javascript:;" title="Закрыть").b-popup__close Закрыть попап
+    .b-popup__cnt
+        form(action='/test/ajax/request.php' data-message="Спасибо, что воспользовались данной услугой. Наш менеджер перезвонить в удобное для вас время.")
+            .b-callback
+                .b-callback__row
+                    .b-callback__ttl Заказать обратный звонок
+                .b-callback__row
+                    label(for="callback-1").b-callback__lbl Ваше имя
+                    input(
+                        id="callback-1"
+                        type="text"
+                        name="name"
+                        autocomplete="name"
+                        placeholder="ФИО"
+                        required)
+                .b-callback__row
+                    label(for="callback-2").b-callback__lbl Номер телефона
+                    input(
+                        id="callback-2"
+                        type="tel"
+                        name="phone"
+                        autocomplete="tel"
+                        placeholder="Телефон"
+                        required)
+                .b-callback__row
+                    label(for="callback-3").b-callback__lbl Комментарии
+                    textarea(id="callback-3")
+                .b-callback__row
+                    input(type="submit" value="Перезвоните мне").b-btn

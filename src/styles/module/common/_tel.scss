@@ -1,0 +1,11 @@
+.b-tel {
+    font-size: 20px;
+    line-height: 20px;
+    font-family: $font-bold;
+    color: $black;
+
+    &:hover {
+        text-decoration: none;
+        color: $black;
+    }
+}

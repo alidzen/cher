@@ -1,0 +1,28 @@
+// Because Fotorama
+// scss-lint:disable
+.layout {
+
+    .container {
+        @include grid-clearfix();
+        @include margin-trailer(2);
+
+        &.m-gutter {
+            .span {
+                box-shadow:
+                    inset 10px 0 0 $white,
+                    inset -10px 0 0 $white;
+            }
+        }
+    }
+
+    .span {
+        @include span(1);
+        background-color: grey;
+        text-align: center;
+    }
+}
+
+
+.doc-page-select {
+    @include margin-trailer(10);
+}

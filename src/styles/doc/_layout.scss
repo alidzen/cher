@@ -1,0 +1,32 @@
+.l-nav {
+    @include span(full);
+    overflow-y: auto;
+
+    @media #{$medium-up} {
+        @include span(2);
+        @include rhythm-padding(1
+        );
+        position: fixed;
+        height: 100vh;
+    }
+
+    @media #{$big-up} {
+        @include span(3);
+    }
+
+}
+
+.l-main {
+    @include span(full);
+    @include padding-trailer(3);
+
+    @media #{$medium-up} {
+        @include span(10);
+        margin-left: span(2);
+    }
+
+    @media #{$big-up} {
+        @include span(9);
+        margin-left: span(3);
+    }
+}

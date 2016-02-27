@@ -1,0 +1,257 @@
+// COLORS
+$black: #404040;
+$black-absolute: #000000;
+$white: #fff;
+$base-font-color: $black;
+$green: #29cca5;
+$green-2: #0d8567;
+
+// TYPOGRAPHY
+// -----------------------------------
+// Fonts name
+$font: 'ptsans', sans-serif;
+$font-bold: 'ptsansbold', sans-serif;
+$font-italic: 'opensans-italic', sans-serif;
+$font-ruble: 'ruble', sans-serif;
+
+// Vertical rhythm
+@import 'base/vertical_rhythm';
+$base-font-size: 16px;
+$base-line-height: 20px;
+$rhythm-unit: 'px';
+$round-to-nearest-half-line: true;
+// Vertical rhythm debug
+$vertical-rhythm-debug: false;
+$vertical-rhythm-color-lines: #000;
+
+// Headings
+$headings:
+    (h1 24px 30px 33px),
+    (h2 20px 30px 40px),
+    (h3 19px 25px 31px),
+    (h4 18px 21px 25px),
+    (h5 17px 18px 20px),
+    (h6 16px 16px 16px);
+$headings-tt-uppercase: false;
+$headings-font-family: $font-bold;
+$headings-margin-trailer: 0;
+
+// Blockquote
+$blockquote-color: #8a8a8a;
+$blockquote-border-color: #cacaca;
+$blockquote-font-family: $font;
+$blockquote-font-size: 16px;
+$blockquote-name-font-family: $font-italic;
+$blockquote-name-font-size: 14px;
+
+// Small
+$small-font-size: $base-font-size - 2;
+
+// Paragraph
+$paragraph-margin-bottom: 1; // rhythm unit
+
+// Links
+$link-color: #0000ff;
+$link-color-hover: lighten($link-color, 5%);
+$link-color-active: darken($link-color, 5%); // :active state
+$link-text-decoration: normal;
+
+// Lists
+$list-color: $black;
+$list-font-size: $base-font-size;
+$list-sublist-padding-left: 4; // gutter value
+$list-margin-bottom: $paragraph-margin-bottom; // rhythm unit
+
+
+// GRID
+// -----------------------------------
+$columns: 12;
+$column-width: 60px;
+$gutter-width: 20px;
+
+
+// BREAKPOINTS
+// -----------------------------------
+$small-upper-bound: 640px;
+$medium-upper-bound: 1024px;
+$big-upper-bound: 1200px;
+$large-upper-bound: 1440px;
+$xlarge-upper-bound: 1920px;
+
+
+// Z-INDEX MANAGEMENT
+// -----------------------------------
+$z-layers: (
+        'hide': -1,
+        'zero': 0,
+        'default': 1,
+        'nav': 2,
+);
+
+
+// GLOBAL SETTINGS
+// -----------------------------------
+
+// Transition default property
+$gl-trs-duration: .3s;
+$gl-trs-function: ease;
+
+// Text transform letterspacing
+$gl-letter-spacing: .2em;
+
+// BLOCKS
+// -----------------------------------
+
+// COMPANY LOGO
+$logo: 'logo';
+
+// BUTTONS
+$btn-color: $white;
+$btn-bg-color: $green;
+$btn-bd-width: 0;
+$btn-bd-color: $green-2;
+$btn-border-radius: 0;
+$btn-font-size: $base-font-size;
+$btn-line-height: $base-line-height;
+$btn-font-family: $font;
+$btn-height: 2; //rhythm unit
+$btn-tt-uppercase: false;
+//hover
+$btn-color-hover: $white;
+$btn-bg-color-hover: darken($green, 5%);
+$btn-bd-color-hover: transparent;
+//disabled
+$btn-color-disabled: #ccc;
+$btn-bg-color-disabled: #eee;
+$btn-bd-color-disabled: transparent;
+
+// POPUP
+$popup-color: $black;
+$popup-bg-color: $white;
+$popup-overlay-color: $black;
+$popup-overlay-opacity: .8;
+$popup-border-radius: 0;
+
+// Popup close button
+//mobile
+$popup-btn-mobile-color: $white;
+$popup-btn-mobile-bg-color: $black;
+$popup-btn-mobile-font-size: 18px;
+$popup-btn-mobile-line-height: $base-line-height;
+$popop-btn-mobile-height: $btn-height; //rhythm unit
+$popup-btn-mobile-tt-up: false;
+$popup-btn-mobile-font-family: $btn-font-family;
+//desktop
+$popup-btn-close-image: 'popup-close'; //image
+$popup-btn-opacity: .5;
+
+// INPUTS
+// Fields
+$input-color: $black;
+$input-bg-color: $white;
+$input-bd-width: 1px;
+$input-bd-color: $black;
+$input-border-radius: 0;
+$input-font-size: 16px;
+$input-font-family: $font;
+$input-height: 2; //rhythm unit
+$textarea-min-height: 5; // rows
+//Placeholder
+$input-placeholder-color: #ccc;
+$input-placeholder-font-style: italic;
+$input-placeholder-font-size: $base-font-size;
+$input-placeholder-opacity: 1;
+//Focus
+$input-bd-color-focus: #663399;
+
+// LABEL
+$label-font-family: $font-bold;
+$label-font-size: 16px;
+$label-color: $black;
+$label-margin-bottom: rhythm(.25);
+
+// CHECKBOX SETTINGS
+$checkbox: 'checkbox'; // image names
+$checkbox-checked: 'checkbox-checked';
+$checkbox-hover: 'checkbox-hover';
+$checkbox-disabled: 'checkbox-disabled';
+
+// RADIO BUTTON SETTINGS
+$radio: 'radio'; //image name
+$radio-checked: 'radio-checked';
+$radio-hover: 'radio-hover';
+$radio-disabled: 'radio-disabled';
+
+// LIST RESET IN WYSIWYG BLOCK
+$lr-color: $black;
+$lr-fz: $base-font-size;
+$lr-sublist-pl: 4;
+
+// NAVIGATION
+$nav-color: $black;
+$nav-font-size: 16px;
+$nav-font-family: $font;
+$nav-text-transform: false;
+$nav-sublist-arrow: 'nav-sublist';
+//hover
+$nav-color-hover: #ff0000;
+//active
+$nav-color-active: #ffa500;
+
+// GALLERY
+// Arrows
+$gallery-arrow-prev: 'gallery-prev';
+$gallery-arrow-next: 'gallery-next';
+// Thumbs
+$gallery-thumbs-border-color: $black;
+$gallery-thumbs-bg-color: $black;
+$gallery-thumbs-bg-opacity: .2;
+$gallery-thumbs-position: center;
+//Image
+$gallery-image-bg-color: #eee;
+//Label
+$gallery-label-color: $black;
+$gallery-label-bg-color: $white;
+$gallery-label-position: false;
+$gallery-label-font-size: 12px;
+$gallery-label-height: 1; //rhythm unit
+$gallery-label-font-family: $font-bold;
+$gallery-image-container-bg-color: $gallery-image-bg-color;
+//Dots
+$gallery-dots-size: 6px;
+$gallery-dots-color: $black;
+$gallery-dots-color-hover: lighten($gallery-dots-color, 30%);
+$gallery-dots-position: center;
+$gallery-dots-horizontal-paddings: 0;
+$gallery-dots-background-color: $gallery-image-bg-color;
+// Caption
+$gallery-caption-width: 100%;
+$gallery-caption-bg-color: $white;
+$gallery-caption-color: $black;
+$gallery-caption-font-size: $base-font-size;
+$gallery-caption-font-family: $font-bold;
+$gallery-caption-text-align: left;
+$gallery-caption-inner-position: bottom;
+
+// ANIMATED LABEL
+$anim-label-font-size: $input-font-size;
+$anim-label-font-size-focus: 10px;
+$anim-label-tt-uppercase: false;
+$anim-label-tt-uppercase-focus: true;
+$anim-label-color: inherit;
+$anim-label-color-focus: inherit;
+
+// SELECT
+$select-font-size: 16px;
+$select-font-family: $font;
+$select-border-width: 1px;
+$select-border-color: #ccc;
+$select-border-radius: 4px;
+$select-color: $black;
+$select-item-color-hover: #999;
+$select-item-background-color: $white;
+$select-item-background-color-selected: #ccc;
+$select-item-background-color-hover: lighten($select-item-background-color-selected, 15%);
+$select-item-border-width: 1px;
+$select-item-border-color: #eee;
+$select-height: $btn-height; // rhythm unit

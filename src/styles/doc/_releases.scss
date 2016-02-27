@@ -1,0 +1,33 @@
+// scss-lint:disable MergeableSelector:
+.releases {
+    border-top: 1px solid $gray;
+
+    > li {
+        @include rhythm-padding(1);
+        border-bottom: 1px solid $gray;
+        overflow: hidden;
+    }
+}
+
+.releases-num {
+    color: $gray;
+    float: left;
+    margin-right: gutter(4);
+}
+
+.releases-text {
+    float: left;
+
+    b {
+        @include margin-trailer(.5);
+        display: block;
+    }
+
+    ul {
+        margin-bottom: 0;
+
+        li {
+            border: none;
+        }
+    }
+}

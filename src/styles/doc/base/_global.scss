@@ -1,0 +1,20 @@
+$gray: #aaa;
+$blue: #07e;
+
+a {
+    color: $blue;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include margin-trailer();
+}
+
+.doc-row {
+    @include margin-trailer();
+}

@@ -1,0 +1,9 @@
+/* Site was made by Kelnik Studios, interactive agency in Saint-Petersburg, Russia */
+/* kelnik.ru */
+/* humanstxt.org */
+
+/* SITE */
+	Standards: HTML5, CSS3
+	Language: Russian
+	Components: jQuery, Foundation
+	Software: Sublime Text, Photoshop, Git

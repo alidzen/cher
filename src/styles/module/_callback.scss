@@ -1,0 +1,24 @@
+.b-callback {
+    @media #{$medium-up} {
+        min-width: 580px;
+    }
+}
+
+.b-callback__ttl {
+    @include adjust-font-size-to(24px);
+    color: $black;
+    font-family: $font-bold;
+}
+
+.b-callback__row {
+    @include margin-trailer();
+
+    &:last-child {
+        @include margin-trailer(0);
+    }
+}
+
+.b-callback__lbl {
+    @include margin-trailer(.5);
+    display: block;
+}

@@ -1,0 +1,13 @@
+.b-feature {
+    text-align: center;
+}
+
+.b-feature__img-wrap {
+    $size: 60px;
+    height: $size;
+    line-height: $size;
+}
+
+.b-feature__img {
+    vertical-align: middle;
+}

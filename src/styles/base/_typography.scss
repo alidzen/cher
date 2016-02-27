@@ -1,0 +1,185 @@
+// INCLUDE FONTS
+@include font(ptsans, 'ptsans/ptsans');
+@include font(ptsansbold, 'ptsansbold/ptsansbold');
+@include font(ruble, 'ruble/ruble-webfont');
+
+// HEADINGS
+$headings:
+    (h1 24px 36px 48px),
+    (h2 20px 30px 40px),
+    (h3 19px 25px 31px),
+    (h4 18px 21px 25px),
+    (h5 17px 18px 20px),
+    (h6 16px 16px 16px) !default;
+
+$headings-tt-uppercase: false !default;
+$headings-font-family: $font !default;
+$headings-margin-trailer: 1 !default; //rhythm unit
+
+@each $heading in $headings {
+    $name: nth($heading, 1);
+    $small-size: nth($heading, 2);
+    $medium-size: nth($heading, 3);
+    $large-size: nth($heading, 4);
+
+    #{$name} {
+        @include adjust-font-size-to($small-size);
+        font-family: $headings-font-family;
+
+        @if ($headings-tt-uppercase) {
+            @include text-transform();
+        }
+
+        @media #{$medium-up} {
+            @include adjust-font-size-to($medium-size);
+        }
+
+        @media #{$big-up} {
+            @include adjust-font-size-to($large-size);
+        }
+    }
+}
+
+h1,
+h2 {
+    @include margin-trailer($headings-margin-trailer);
+}
+
+// BLOCKQUOTE
+$blockquote-color: #8a8a8a !default;
+$blockquote-border-color: #cacaca !default;
+$blockquote-font-family: $font !default;
+$blockquote-font-size: 16px !default;
+$blockquote-name-font-family: $font-italic !default;
+$blockquote-name-font-size: 14px !default;
+
+blockquote {
+    @include adjust-font-size-to($blockquote-font-size);
+    color: $blockquote-color;
+    padding: {
+        left: gutter(4);
+        top: rhythm(1);
+        bottom: rhythm(1);
+    };
+    border-left: 1px solid $blockquote-color;
+    font-family: $blockquote-font-family;
+}
+
+cite {
+    @include adjust-font-size-to($blockquote-name-font-size);
+    font-family: $blockquote-name-font-family;
+    display: block;
+
+    &:before {
+        content: '\2014 \0020';
+    }
+}
+
+
+// SMALL
+$small-font-size: $base-font-size - 2 !default;
+
+small {
+    font-size: $small-font-size;
+}
+
+// PARAGRAPH
+$paragraph-margin-bottom: 1 !default; // rhythm unit
+p {
+    @include margin-trailer($paragraph-margin-bottom);
+}
+
+// LINKS
+$link-color: #0000ff !default;
+$link-color-hover: lighten($link-color, 5%) !default;
+$link-color-active: darken($link-color, 5%) !default; // :active state
+$link-text-decoration: reset !default;
+
+a {
+    color: $link-color;
+
+    @if ($link-text-decoration == 'normal') {
+        text-decoration: none;
+    } @else if ($link-text-decoration == 'invert'){
+        text-decoration: underline;
+    } @else if ($link-text-decoration == 'reset'){
+        text-decoration: none;
+    }
+
+    &:hover {
+        @if ($link-text-decoration == 'normal') {
+            text-decoration: underline;
+        } @else if ($link-text-decoration == 'invert'){
+            text-decoration: none;
+        } @else if ($link-text-decoration == 'reset'){
+            text-decoration: none;
+        }
+    }
+
+    &:active {
+        color: $link-color-active;
+    }
+}
+
+// LISTS
+$list-color: $black !default;
+$list-font-size: $base-font-size !default;
+$list-sublist-padding-left: 4 !default; // gutter value
+$list-margin-bottom: $paragraph-margin-bottom !default; // rhythm unit
+
+.b-typo-reset {
+
+    ul ul,
+    ol ol {
+        padding-left: gutter($list-sublist-padding-left);
+    }
+
+    ul,
+    ol {
+        @include margin-trailer($list-margin-bottom);
+    }
+
+    ol {
+        counter-reset: list;
+
+        li {
+            @include adjust-font-size-to($list-font-size);
+        }
+
+        li:before {
+            counter-increment: list;
+            content: counter(list);
+            color: $list-color;
+            padding-right: gutter(1);
+            float: left;
+        }
+    }
+
+    ul {
+
+        li {
+            @include adjust-font-size-to($list-font-size);
+        }
+
+        li:before {
+            content: '•';
+            color: $list-color;
+            padding-right: gutter(1);
+            float: left;
+        }
+    }
+}
+
+// b, strong
+b,
+strong {
+    font-family: $font-bold;
+    font-weight: 700;
+}
+
+// i, em
+i,
+em {
+    font-family: $font-italic;
+    font-style: italic;
+}

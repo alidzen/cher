@@ -1,0 +1,186 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset="UTF-8")
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        link(rel='stylesheet' href="/styles/guideline.css")
+        title Гайдлайн проекта
+    body
+        //Сверстанные страницы
+        -var links = []
+        -links.push({'url': 'home', 'name': 'Главная страница'});
+
+        //Цвета проекта
+        -var colors = ['red', 'orange', 'green', 'blue', '#ccc', '#eee']
+
+        nav.nav
+            ul.nav__list
+                li
+                    a(href="#spisok") Список свёрстанных страниц
+                li
+                    a(href="#typo") Типографика
+                li
+                    a(href="#fonts") Шрифты
+                li
+                    a(href="#layout") Сетка
+                li
+                    a(href="#colors") Цвета
+                li
+                    a(href="#lists") Списки
+                li
+                    a(href="#links") Ссылки
+                li
+                    a(href="#buttons") Кнопки
+
+        .content
+            #spisok.section
+                h2 Список свёрстанных страниц
+                ol
+                    -each link in links
+                        li
+                            a(href!=link.url+'.html')=link.name
+
+
+            #typo.section
+                h2 Типографика
+                h1 Заголовок 1
+                h2 Заголовок 2
+                h3 Заголовок 3
+                h4 Заголовок 4
+                h5 Заголовок 5
+                h6 Заголовок 6
+                br
+                p.
+                    Latin <br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aliquam architecto assumenda deserunt dignissimos distinctio
+                    doloribus, fugiat hic ipsam maxime minima molestiae, numquam,
+                    obcaecati optio perferendis quo temporibus veniam voluptas
+                    voluptatibus. Ad eius est hic laudantium! Ad consequatur
+                    delectus doloribus, dolorum ea explicabo fuga fugiat, neque
+                    odio, omnis rem saepe similique veritatis. Assumenda commodi
+                    culpa deleniti ducimus earum expedita nam nulla, pariatur
+                     perspiciatis quidem ratione veniam.
+                p.
+                    Cyrillic <br>
+                    Далеко-далеко за словесными горами в стране гласных и
+                    согласных живут рыбные тексты. Вдали от всех живут они в
+                    буквенных домах на берегу Семантика большого языкового
+                    океана. Маленький ручеек Даль журчит по всей стране и
+                    обеспечивает ее всеми необходимыми правилами.
+
+                p.
+                    Символы, которые чудесным образом должны оказаться в шрифте <br>
+                    №
+
+            #fonts.section
+                h2 Шрифты
+                h3.type_font1 OpenSans
+                h3.type_font2 OpenSans Bold
+                h3.type_font3 OpenSans Italic
+
+
+            #layout.section
+                h2 Сетка
+                p 12 колонок по 60px с внутренними боковыми отступами по 10px
+                .l-row
+                    .l-col 1
+                    .l-col 2
+                    .l-col 3
+                    .l-col 4
+                    .l-col 5
+                    .l-col 6
+                    .l-col 7
+                    .l-col 8
+                    .l-col 9
+                    .l-col 10
+                    .l-col 11
+                    .l-col 12
+                .l-row.l-row2
+                    .l-col 1
+                    .l-col 2
+                    .l-col 3
+                    .l-col 4
+                    .l-col 5
+                    .l-col 6
+                .l-row.l-row3
+                    .l-col 1
+                    .l-col 2
+                    .l-col 3
+                    .l-col 4
+                .l-row.l-row4
+                    .l-col 1
+                    .l-col 2
+                    .l-col 3
+                .l-row.l-row6
+                    .l-col 1
+                    .l-col 2
+                .l-row.l-row12
+                    .l-col 1
+
+
+            #colors.section
+                h2 Цвета
+                ul.colors
+                    -each color in colors
+                        li(style="background-color: #{color}").color
+
+            #lists
+                h2 Списки
+                ul
+                    li Ненумерованный список 1
+                    li Ненумерованный список 2
+                    li Ненумерованный список 3
+                    li Ненумерованный список 4
+                ol
+                    li Нумерованные список 1
+                    li Нумерованные список 2
+                    li Нумерованные список 3
+                    li Нумерованные список 4
+
+
+            #links.section
+                h2 Ссылки
+                .links
+                    a(href="#").link Ссылка
+
+            #forms.section
+                h2 Формы
+                h3 Поля ввода
+                input(type="text" placeholder="input text")
+                br
+                br
+                textarea(placeholder="Textarea")
+
+                h3 Чекбоксы
+                .b-form__checkbox
+                    input(id="ch1" type="checkbox")
+                    label(for="ch1") Не выбран
+                .b-form__checkbox
+                    input(id="ch2" type="checkbox" checked)
+                    label(for="ch2") Выбран
+                .b-form__checkbox
+                    input(id="ch3" type="checkbox" disabled)
+                    label(for="ch3") Неактивный
+
+                br
+                br
+                h3 Радио кнопки
+                .b-form__radio
+                    input(id="ra1" type="radio" name="group1")
+                    label(for="ra1") Не выбран
+                .b-form__radio
+                    input(id="ra2" type="radio" name="group1" checked=)
+                    label(for="ra2") Выбран
+                .b-form__radio
+                    input(id="ra3" type="radio" name="group1" disabled readonly)
+                    label(for="ra3") Неактивный
+
+            #buttons.section
+                h2 Кнопки
+                a(href="#").b-btn Кнопка/Ховер
+                a(href="#").b-btn Неактивная
+
+
+
+    script(src="/scripts/lib/requirejs/require.min.js" data-main="/scripts/config.js")

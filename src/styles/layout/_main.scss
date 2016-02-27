@@ -1,0 +1,33 @@
+.l-wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+
+.l-header {
+    @include margin-leader(2);
+    @include margin-trailer(1);
+    flex: 0 0 auto;
+}
+
+.l-main {
+    flex: 1 0 auto;
+}
+
+.l-footer {
+    flex: 0 0 auto;
+}
+
+.l-limit-wrap {
+
+    @media #{$medium-down} {
+        margin: {
+            right: gutter(1);
+            left: gutter(1);
+        };
+    }
+
+    @media #{$big-up} {
+        @include container;
+    }
+}

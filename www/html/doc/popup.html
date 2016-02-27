@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="/scripts/lib/magnific-popup/dist/magnific-popup.css">
+        <link rel="stylesheet" href="/scripts/lib/fotorama/fotorama.css">
+        <link rel="stylesheet" href="/scripts/lib/jquery-selectric/public/selectric.css">
+        <link rel="stylesheet" href="/styles/doc.css">
+        <title>Попап</title>
+    </head>
+
+    <body>
+        <div class="l-nav">
+            <a href="http://kelnik.ru" target="_blank" title="Кельник" class="b-kelnik">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="403.5px" height="69.3px" viewbox="0 0 403.5 69.3" style="enable-background:new 0 0 403.5 69.3;" xml:space="preserve" class="b-kelnik__img">
+                    <g>
+                        <path d="M10.4,67.2c0,0.4-0.3,0.6-0.6,0.6H0.6c-0.4,0-0.6-0.3-0.6-0.6V1.6C0,1.3,0.3,1,0.6,1h9.1c0.4,0,0.6,0.3,0.6,0.6V67.2z"></path>
+                        <path d="M117.9,67.2c0,0.4-0.3,0.6-0.7,0.6h-8.5c-0.4,0-0.6-0.3-0.6-0.6V1.6c0-0.3,0.3-0.6,0.6-0.6h8.5c0.4,0,0.7,0.3,0.7,0.6V67.2            z"></path>
+                        <path d="M210.2,67.2c0,0.4-0.3,0.6-0.6,0.6h-8.5c-0.4,0-0.6-0.3-0.6-0.6V1.7c0-0.4,0.3-0.7,0.6-0.7h8.5c0.4,0,0.6,0.3,0.6,0.7V67.2            z"></path>
+                        <path d="M190.8,67.2c0,0.4-0.3,0.6-0.6,0.6h-8.5c-0.4,0-0.6-0.3-0.6-0.6V19.5c0-0.4,0.3-0.6,0.6-0.6h8.5c0.4,0,0.6,0.3,0.6,0.6            V67.2z"></path>
+                        <path d="M190.8,10.3c0,0.4-0.3,0.6-0.6,0.6h-8.5c-0.4,0-0.6-0.3-0.6-0.6V1.7c0-0.4,0.3-0.7,0.6-0.7h8.5c0.4,0,0.6,0.3,0.6,0.7V10.3            z"></path>
+                        <path d="M24.9,34.4c3.9-4.5,28-31.8,28.6-32.5C53.8,1.6,53.5,1,53.1,1H42c-0.3,0-0.6,0.2-0.9,0.6L16.3,30.1v8.6l24.9,28.5            c0.3,0.3,0.6,0.6,0.9,0.6h11.9c0.3,0,0.7-0.6,0.4-0.9C53.7,66.3,28.5,38.4,24.9,34.4z"></path>
+                        <path d="M223.1,42.7c5-5.9,18.6-22.3,19.2-23c0.3-0.3-0.1-0.9-0.4-0.9h-9.4c-0.3,0-0.6,0.2-0.9,0.6l-15.5,19V47l16.3,20.2            c0.3,0.4,0.6,0.6,0.9,0.6h10.2c0.4,0,0.7-0.6,0.4-0.9C243.3,66.3,235.6,57.8,223.1,42.7z"></path>
+                        <path d="M149.7,17.6c-5.9,0-22.2,0-22.2,22.2v27.3c0,0.4,0.3,0.6,0.6,0.6h8.5c0.4,0,0.6-0.3,0.6-0.6V38.8            c0-12.8,8.8-12.7,12.2-12.7c3.3,0,12.2,0.1,12.2,12.7v28.4c0,0.4,0.3,0.6,0.6,0.6h8.5c0.4,0,0.7-0.3,0.7-0.6V39.8            C171.4,17.6,155.8,17.6,149.7,17.6z"></path>
+                        <path d="M93.6,24.2c-4-4.5-9.3-6.6-16.2-6.6c-7.1,0-12.5,2.1-16.5,6.7c-4.1,4.6-6.1,10.9-6.1,19c0,8.2,2.1,14.6,6.1,19.2            c4,4.7,9.3,6.6,16.3,6.6c5.6,0,10.2-1.2,14.2-4.3c3.9-3,6.3-7,7.3-11.9l0,0c0,0,0,0,0-0.1c0.1-0.4-0.4-0.4-0.4-0.4h-9            c-0.6,2.5-1.9,4.8-3.8,6.2c-1.9,1.4-4.9,2.3-7.7,2.3c-3.9,0-7.4-1.4-9.6-3.8c-2.2-2.4-3.8-6.3-3.7-10.9h33.8c0.7,0,1-0.4,1-1            c0.1-1.5,0.1-2,0.1-2.6C99.5,34.8,97.5,28.7,93.6,24.2z M64.6,38.8c0.3-4.1,1.8-7.5,3.8-9.7c2-2.1,5.3-3.4,8.8-3.4            c3.7,0,7.3,1.3,9.3,3.4c2,2.2,3.3,5.6,3.3,9.6H64.6z"></path>
+                    </g>
+                    <g>
+                        <path d="M355.2,56.3c0-1.2-0.8-2.7-1.8-3.3l-20-14.2c-1-0.7-1.8-0.2-1.8,0.9v25.8c0,1.2,1,2.1,2.1,2.1H353c1.2,0,2.1-1,2.1-2.1            L355.2,56.3L355.2,56.3z"></path>
+                        <path d="M285,2.1c0-1.2,1-2.1,2.2-2.1h17.6c1.2,0,2.1,1,2.1,2.1v63.4c0,1.2-1,2.1-2.1,2.1h-17.6c-1.2,0-2.2-1-2.2-2.1V2.1z"></path>
+                        <path d="M355.2,11.4c0,1.2-0.8,2.7-1.8,3.3l-20,14.2c-1,0.7-1.8,0.2-1.8-0.9V2.1c0-1.2,1-2.1,2.1-2.1H353c1.2,0,2.1,1,2.1,2.1            L355.2,11.4L355.2,11.4z"></path>
+                        <path d="M403.4,56.3c0-1.2-0.8-2.7-1.8-3.3l-20-14.2c-0.9-0.7-1.8-0.2-1.8,0.9v25.8c0,1.2,1,2.1,2.1,2.1h19.2c1.2,0,2.1-1,2.1-2.1            L403.4,56.3L403.4,56.3z"></path>
+                        <path d="M403.4,11.4c0,1.2-0.8,2.7-1.8,3.3l-20,14.2c-0.9,0.7-1.8,0.2-1.8-0.9V2.1c0-1.2,1-2.1,2.1-2.1h19.2c1.2,0,2.1,1,2.1,2.1            L403.4,11.4L403.4,11.4z"></path>
+                    </g>
+                </svg>
+            </a>
+            <nav class="b-nav-doc">
+                <ul class="b-nav-doc__list">
+                    <li class="b-nav-doc__item"><a href="/html/doc" class="b-nav-doc__link">Главная</a></li>
+                    <li class="b-nav-doc__item"><a href="/html/doc/history.html" class="b-nav-doc__link">История развития</a></li>
+                    <li class="b-nav-doc__item"><a href="/html/doc/typography.html" class="b-nav-doc__link">Типография</a>
+                        <ul class="b-nav-doc__sublist">
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/typography.html#typography-font" class="b-nav-doc__sublink">Шрифты</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/typography.html#typography-headings" class="b-nav-doc__sublink">Заголовки</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/typography.html#typography-blockquote" class="b-nav-doc__sublink">Цитата</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/typography.html#typography-small" class="b-nav-doc__sublink">Small</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/typography.html#typography-paragraph" class="b-nav-doc__sublink">Параграф</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/typography.html#typography-links" class="b-nav-doc__sublink">Ссылка</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/typography.html#typograoy-list" class="b-nav-doc__sublink">Списки</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/typography.html#typography-ul" class="b-nav-doc__sublink">Несортированный список</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/typography.html#typography-ol" class="b-nav-doc__sublink">Сортированный список</a></li>
+                        </ul>
+                    </li>
+                    <li class="b-nav-doc__item"><span class="b-nav-doc__link">Примитивы</span>
+                        <ul class="b-nav-doc__sublist">
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/kelnik-logo.html" class="b-nav-doc__sublink">Логотип Кельник</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/logo.html" class="b-nav-doc__sublink">Логотип Компании</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/buttons.html" class="b-nav-doc__sublink">Кнопки</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/popup.html" class="b-nav-doc__sublink">Попап</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/gallery.html" class="b-nav-doc__sublink">Галерея</a></li>
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/tabs.html" class="b-nav-doc__sublink">Табы</a></li>
+                            <li class="b-nav-doc__subitem"><span class="b-nav-doc__sublink">Формы</span>
+                                <ul class="b-nav-doc__sublist">
+                                    <li class="b-nav-doc__subitem"><a href="/html/doc/forms.html#forms-text-fields" class="b-nav-doc__sublink">Текстовые поля</a></li>
+                                    <li class="b-nav-doc__subitem"><a href="/html/doc/forms.html#forms-label" class="b-nav-doc__sublink">Лейблы</a></li>
+                                    <li class="b-nav-doc__subitem"><a href="/html/doc/forms.html#forms-animated-label" class="b-nav-doc__sublink">Анимированный label</a></li>
+                                    <li class="b-nav-doc__subitem"><a href="/html/doc/forms.html#forms-checkbox" class="b-nav-doc__sublink">Чекбоксы</a></li>
+                                    <li class="b-nav-doc__subitem"><a href="/html/doc/forms.html#forms-radio-buttons" class="b-nav-doc__sublink">Радио кнопки</a></li>
+                                    <li class="b-nav-doc__subitem"><a href="/html/doc/forms.html#forms-select" class="b-nav-doc__sublink">Селект</a></li>
+                                </ul>
+                            </li>
+                            <li class="b-nav-doc__subitem"><span class="b-nav-doc__sublink">Навигация</span>
+                                <ul class="b-nav-doc__sublist">
+                                    <li class="b-nav-doc__subitem"><a href="/html/doc/nav.html#nav-signle" class="b-nav-doc__sublink">Одноуровневая</a></li>
+                                    <li class="b-nav-doc__subitem"><a href="/html/doc/nav.html#nav-multi" class="b-nav-doc__sublink">Многоуровневая</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="b-nav-doc__item"><span class="b-nav-doc__link">Блоки</span>
+                        <ul class="b-nav-doc__sublist">
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/callback.html" class="b-nav-doc__sublink">Обратный звонок</a></li>
+                        </ul>
+                    </li>
+                    <li class="b-nav-doc__item"><a href="/html/doc/mixins.html" class="b-nav-doc__link">Миксины</a>
+                        <ul class="b-nav-doc__sublist">
+                            <li class="b-nav-doc__subitem"><a href="/html/doc/mixins.html#mixin-text-transform" class="b-nav-doc__sublink">text-transform (uppercase)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="l-main">
+            <h1>Попап</h1>
+            <p>В проекте в качестве попапа используется Magnific.<a target="_blank" href="http://dimsemenov.com/plugins/magnific-popup/documentation.html"> Документация</a></p>
+            <h2>Описание</h2>
+            <p> Контентом в попапе может быть всё что угодно — карта, галерея, картинка, форма, текст. Весь контент помещайте в <code>.b-popup</code>. </p>
+            <h3>Использование</h3> <pre>  &lt;a href="<b>#popup</b>" class="j-popup"&gt;Открыть попап&lt;a&gt;
+  &ltdiv id="<b>#popup</b>"&gt;
+      ...
+  &lt;div&gt;</pre>
+            <p>В данном примере ссылка покажет в попапе, всё что находится в <code>#popup</code>.</p>
+            <h3>Параметры</h3>
+            <p>Параметры применяются через data-атрибуты на ссылке</p>
+            <h3>Параметры — основные</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Описание</th>
+                        <th>Тип</th>
+                        <th>Зн.</th>
+                        <th>По-умолчанию</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>data-type</td>
+                        <td>Тип попапа</td>
+                        <td>string</td>
+                        <td>inline | iframe | image</td>
+                        <td>inline</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Пример
+        <pre>  &lt;a href="#" <b>data-type="inline"</b>&gt;Открыть попап&lt;a&gt;</pre>
+      </h4>
+            <h3>Параметры — темы</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Описание</th>
+                        <th>Тип</th>
+                        <th>Зн.</th>
+                        <th>По-умолчанию</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>data-theme</td>
+                        <td>На родителя попапа вешается модификатор</td>
+                        <td>string</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Пример</h4> <pre>  &lt;a href="#" <b>data-theme="orange"</b>&gt;Открыть попап&lt;a&gt;</pre>
+            <p>На основе этого data-атрибута создаётся класс <code>b-theme_theme_orange</code>. И вы можете унаследовшись от него задать свои стили.</p>
+            <h4>SASS</h4> <pre>.b-theme_theme_<b>orange</b> {
+      .b-popup {
+          ...
+      }
+}</pre>
+            <h3>Параметры — полноэкранный</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Описание</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>data-fullsize</td>
+                        <td>Полноэкранный попап</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Пример
+        <pre>  &lt;a href="#" <b>data-fullsize</b>&gt;Открыть попап&lt;a&gt;</pre>
+      </h4>
+            <h3>Параметры — анимация исчезания и появления</h3>
+            <p>Плавное появление и скрытие попапа</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Описание</th>
+                        <th>Тип</th>
+                        <th>Зн.</th>
+                        <th>По-умолчанию</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>data-toggle-time</td>
+                        <td>Время появления и исчезновения</td>
+                        <td>number</td>
+                        <td>ms</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Пример</h4> <pre>  &lt;a href="#" <b>data-toggle-time="300"</b>&gt;Открыть попап&lt;a&gt;</pre>
+            <h3>Параметры — тело попапа</h3>
+            <h4>SASS</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Описание</th>
+                        <th>Тип</th>
+                        <th>Зн.</th>
+                        <th>По-умолчанию</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$popup-color</td>
+                        <td>Цвет текста</td>
+                        <td>color</td>
+                        <td>-</td>
+                        <td>$base-font-color</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-bg-color</td>
+                        <td>Цвет фона</td>
+                        <td>color</td>
+                        <td>-</td>
+                        <td>$white</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-overlay-color</td>
+                        <td>Цвет оверлея</td>
+                        <td>color</td>
+                        <td>-</td>
+                        <td>$black</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-overlay-opacity</td>
+                        <td>Прозрачность оверлея</td>
+                        <td>number</td>
+                        <td>.10</td>
+                        <td>.8</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-border-radius</td>
+                        <td>Радиус скругления контента попапа</td>
+                        <td>number</td>
+                        <td>px</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Параметры — кнопка</h3>
+            <p>Кнопка в попапе имеет два вида — кнопка в мобильном виде и крестик на десктопе.</p>
+            <p>В мобильной версии все параметры по-умолчанию принимаются от <code>.b-btn</code></p>
+            <p> Для отображения крестика добавить в папки /sprites/1x и /sprites/2x картинки popup-close.png. </p>
+            <h4>Кнопка мобильная</h4>
+            <h4>SASS</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Описание</th>
+                        <th>Тип</th>
+                        <th>Зн.</th>
+                        <th>По-умолчанию</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$popup-btn-mobile-color</td>
+                        <td>Цвет текста</td>
+                        <td>color</td>
+                        <td>-</td>
+                        <td>$btn-color</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-btn-mobile-bg-color</td>
+                        <td>Цвет фона</td>
+                        <td>color</td>
+                        <td>-</td>
+                        <td>$btn-bg-color</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-btn-mobile-font-size</td>
+                        <td>Размер шрифта</td>
+                        <td>number</td>
+                        <td>px</td>
+                        <td>$btn-font-size</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-btn-mobile-line-height</td>
+                        <td>Межстрочный интервал</td>
+                        <td>number</td>
+                        <td>px</td>
+                        <td>$base-line-height</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-btn-mobile-font-family</td>
+                        <td>Шрифт</td>
+                        <td>string</td>
+                        <td>-</td>
+                        <td>$btn-font-family</td>
+                    </tr>
+                    <tr>
+                        <td>$popop-btn-mobile-height</td>
+                        <td>Высота кнопки</td>
+                        <td>number</td>
+                        <td>rhythm</td>
+                        <td>$btn-height</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-btn-mobile-tt-up</td>
+                        <td>Преобразование текста в прописные или заглавные</td>
+                        <td>bool</td>
+                        <td>false|true</td>
+                        <td>$btn-tt-up / false</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Кнопка десктопная</h4>
+            <h4>SASS</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Описание</th>
+                        <th>Тип</th>
+                        <th>Зн.</th>
+                        <th>По-умолчанию</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$popup-btn-close-image</td>
+                        <td>Название файла картинки крестика</td>
+                        <td>string</td>
+                        <td>-</td>
+                        <td>popup-close</td>
+                    </tr>
+                    <tr>
+                        <td>$popup-btn-opacity</td>
+                        <td>Прозрачность крестика</td>
+                        <td>number</td>
+                        <td>.1</td>
+                        <td>.5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Вживую</h3><a href="#popup" class="j-popup">Открыть попап</a>
+            <div id="popup" class="mfp-hide b-popup"><a href="javascript:;" title="Закрыть" class="b-popup__close">Закрыть попап</a>
+                <div class="b-popup__cnt">
+                    <h1>Заголовок</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus lectus in odio placerat, vitae egestas libero vehicula. Vestibulum vestibulum purus at gravida efficitur. Donec quis condimentum sem, id aliquam ante. Quisque
+                        semper quis erat at viverra. Suspendisse vitae luctus massa. Nam imperdiet mi maximus metus tincidunt posuere. Pellentesque mattis viverra enim vitae vehicula. Praesent consequat mi a magna convallis, aliquam venenatis eros commodo.
+                        Aenean pharetra dui vitae magna lobortis, ac cursus dolor tincidunt. Cras efficitur vitae felis nec tempor. Proin non fringilla nunc, eget efficitur urna. Vestibulum ornare, tortor ac varius efficitur, eros diam rutrum est, blandit
+                        dapibus augue lorem vitae augue. Etiam eleifend semper sapien, in euismod nibh tempus vel. Pellentesque tempor magna et eros placerat molestie. Mauris malesuada blandit ante, ut tristique ligula. Vivamus dignissim mattis arcu a sodales.</p>
+                </div>
+            </div>
+        </div>
+        <script src="/scripts/lib/requirejs/require.min.js" data-main="/scripts/config.js"></script>
+    </body>
+
+</html>

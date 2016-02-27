@@ -1,0 +1,22 @@
+{
+  "name": "kelnik.foundation.template",
+  "authors": [
+    "Vladimir Pavlikov <theitzamna@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "dependencies": {
+    "fastclick": "~1.0.3",
+    "fotorama": "~4.6.4",
+    "handlebars": "~3.0.0",
+    "jquery": "~2.1.4",
+    "jquery.maskedinput": "~1.4.1",
+    "magnific-popup": "~1.0.0",
+    "modernizr": "~2.8.3",
+    "requirejs": "latest",
+    "webshim": "~1.15.6",
+    "jquery-selectric": "~1.9.4"
+  }
+}
