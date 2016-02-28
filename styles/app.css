@@ -2625,7 +2625,7 @@ a[href^='tel:'], a[href^='mailto:'] {
   transition-timing-function: ease;
   position: relative;
   min-height: 260px;
-  background: url("/img/home-bg.jpg") no-repeat 50% 50%;
+  background: url("/cher/img/home-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
   text-align: center;
   opacity: 0; }
@@ -2697,7 +2697,7 @@ a[href^='tel:'], a[href^='mailto:'] {
         clear: none; } }
 
 .b-logo {
-  background-image: url("/img/sprites.png");
+  background-image: url("/cher/img/sprites.png");
   background-position: -121px 0px;
   width: 165px;
   height: 32px;
@@ -2707,7 +2707,7 @@ a[href^='tel:'], a[href^='mailto:'] {
   display: block; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {
     .b-logo {
-      background-image: url("/img/sprites@2x.png");
+      background-image: url("/cher/img/sprites@2x.png");
       background-size: 286px 147px; } }
 
 .b-btn {
