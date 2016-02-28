@@ -98,17 +98,17 @@ textarea {
 @font-face {
   font-family: "ptsans";
   src: url("/cher/fonts/ptsans/ptsans.eot");
-  src: url("/cher/fonts/ptsans/ptsans.eot?#iefix") format("embedded-opentype"), url("/fonts/ptsans/ptsans.ttf") format("truetype"), url("/fonts/ptsans/ptsans.woff") format("woff"); }
+  src: url("/cher/fonts/ptsans/ptsans.eot?#iefix") format("embedded-opentype"), url("/cher/fonts/ptsans/ptsans.ttf") format("truetype"), url("/cher/fonts/ptsans/ptsans.woff") format("woff"); }
 
 @font-face {
   font-family: "ptsansbold";
   src: url("/cher/fonts/ptsansbold/ptsansbold.eot");
-  src: url("/cher/fonts/ptsansbold/ptsansbold.eot?#iefix") format("embedded-opentype"), url("/fonts/ptsansbold/ptsansbold.ttf") format("truetype"), url("/fonts/ptsansbold/ptsansbold.woff") format("woff"); }
+  src: url("/cher/fonts/ptsansbold/ptsansbold.eot?#iefix") format("embedded-opentype"), url("/cher/fonts/ptsansbold/ptsansbold.ttf") format("truetype"), url("/cher/fonts/ptsansbold/ptsansbold.woff") format("woff"); }
 
 @font-face {
   font-family: "ruble";
   src: url("/cher/fonts/ruble/ruble-webfont.eot");
-  src: url("/cher/fonts/ruble/ruble-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/ruble/ruble-webfont.ttf") format("truetype"), url("/fonts/ruble/ruble-webfont.woff") format("woff"); }
+  src: url("/cher/fonts/ruble/ruble-webfont.eot?#iefix") format("embedded-opentype"), url("/cher/fonts/ruble/ruble-webfont.ttf") format("truetype"), url("/cher/fonts/ruble/ruble-webfont.woff") format("woff"); }
 
 h1 {
   font-size: 24px;
