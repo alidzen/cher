@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link type="text/plain" rel="author" href="/humans.txt">
+    <link rel="stylesheet" href="/styles/app.css">
+
+    <title>Form test</title>
+</head>
+<body>
+    <div class="l-row">
+        <div class="l-col" style="height:300px">
+            <form method="POST" action="/test/ajax/form_success.json">
+                <div>
+                    <h3>Работает аяксом (успех)</h3>
+                </div>
+                <div>
+                    <input type="text" name="name" placeholder="Введите имя" autocomplete="name">
+                </div>
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="l-row">
+        <div class="l-col" style="height:300px">
+            <form method="POST" action="/test/ajax/form_error.json">
+                <div>
+                    <h3>Работает аяксом (провал)</h3>
+                </div>
+                <div>
+                    <input type="text" name="name" placeholder="Введите имя" autocomplete="name">
+                </div>
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="l-row">
+        <div class="l-col" style="height:300px">
+            <!-- data-noinit отменяет стандартный обработчик форм -->
+            <form method="POST" action="/test/ajax/form_success.json" data-noinit>
+                <div>
+                    <h3>Обычный post</h3>
+                </div>
+                <div>
+                    <input type="text" name="name" placeholder="Введите имя" autocomplete="name">
+                </div>
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/scripts/lib/requirejs/require.min.js" data-main="/scripts/config.js"></script>
+</body>
+</html>
