@@ -11,11 +11,7 @@ $nav-color-active: #ffa500 !default;
 // Extends
 %b-nav__item {
     float: left; // Flexbox fallback
-    margin-right: gutter(1);
-
-    &:last-child {
-        margin-right: 0;
-    }
+    flex-basis: 25%;
 }
 
 %b-nav__link {
@@ -24,6 +20,8 @@ $nav-color-active: #ffa500 !default;
     color: $nav-color;
     font-family: $nav-font-family;
     text-decoration: none;
+    display: inline-block;
+    width: 100%;
 
     @if ($nav-text-transform) {
         @include text-transform();
@@ -41,13 +39,17 @@ $nav-color-active: #ffa500 !default;
 .b-nav__list {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     position: relative; // Sublist position
+
+    @media #{$big-up} {
+
+    }
 }
 
 .b-nav__item {
     @extend %b-nav__item;
-    flex: 0 0 auto;
+    flex: 1 0 auto;
 
     @media #{$medium-up} {
         flex-grow: 1;

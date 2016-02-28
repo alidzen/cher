@@ -129,5 +129,39 @@ define('app', [
         });
     })($('select'));
 
+    // height of gret block on main page
+    (function($greatings) {
+        if (!$greatings.length) {
+            return;
+        }
+
+        var setHeight = function() {
+            var screenHeight = $(window).height();
+            var screenSize = $(window).width();
+            var $topCnt = $('.l-header');
+            var $bottomCnt = $('.l-home__features');
+            var topCntHeight = $topCnt.outerHeight(true);
+            var bottomCntHeight = $bottomCnt.outerHeight(true);
+            var height = 0;
+
+            if (screenSize < 1025) {
+                height = screenHeight - topCntHeight;
+            } else {
+                height = screenHeight - topCntHeight - bottomCntHeight - 20;
+            }
+
+            $greatings.css({
+                height: height,
+                opacity: 1
+            });
+        };
+
+        setHeight();
+
+        $(window).on('resize', function() {
+            setHeight();
+        });
+    })($('.j-home-great'));
+
     return {};
 });

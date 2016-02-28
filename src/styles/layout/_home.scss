@@ -1,20 +1,22 @@
 .l-home__greatings {
     @include margin-trailer(1);
     @include grid-clearfix();
+    @include transition(opacity);
     position: relative;
-    height: calc(100vh - 92px);
+    min-height: rhythm(13);
     background: url('/img/home-bg.jpg') no-repeat 50% 50%;
     background-size: cover;
     text-align: center;
+    opacity: 0;
 }
 
 .l-home__greatings-col {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
     @media #{$medium-up} {
         @include span(10 center);
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
     }
 
     @media #{$big-up} {
@@ -27,12 +29,19 @@
 }
 
 .l-home__features {
+    @include margin-trailer(1);
     @include grid-clearfix();
 }
 
 .l-home__feature {
+    @include margin-trailer(1);
+
+    @media #{$small-only} {
+        @include span(10 center);
+    }
 
     @media #{$medium-up} {
+        @include margin-trailer(0);
         @include gallery(4);
     }
 }

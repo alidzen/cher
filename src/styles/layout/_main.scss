@@ -5,8 +5,8 @@
 }
 
 .l-header {
-    @include margin-leader(2);
-    @include margin-trailer(1);
+    @include padding-leader(2);
+    @include padding-trailer(1);
     flex: 0 0 auto;
 }
 
@@ -26,6 +26,13 @@
             left: gutter(1);
         };
     }
+
+    @media #{$big-up} {
+        @include container;
+    }
+}
+
+.l-desktop-limit-wrap {
 
     @media #{$big-up} {
         @include container;

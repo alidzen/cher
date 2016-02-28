@@ -4,6 +4,7 @@
 
 .b-feature__img-wrap {
     $size: 60px;
+    @include margin-trailer(.5);
     height: $size;
     line-height: $size;
 }
